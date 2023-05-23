@@ -1,0 +1,162 @@
+{% extends 'herbworldapp/basic.html' %}
+
+{% load static %}
+
+{% block title%} About Us{% endblock %}
+
+{% block css %}
+
+.team-grid {
+color: #313437;
+background-color: #fff;
+}
+
+.team-grid p {
+color: #7d8285;
+}
+
+.team-grid h2 {
+font-weight: bold;
+margin-bottom: 40px;
+padding-top: 40px;
+color: inherit;
+}
+
+@media (max-width:767px) {
+.team-grid h2 {
+margin-bottom: 25px;
+padding-top: 25px;
+font-size: 24px;
+}
+}
+
+.team-grid .intro {
+font-size: 16px;
+max-width: 600px;
+margin: 0 auto;
+}
+
+.team-grid .intro p {
+margin-bottom: 0;
+}
+
+.team-grid .people {
+padding: 0px 0;
+}
+
+.team-grid .item {
+margin-bottom: 30px;
+}
+
+.team-grid .item .box {
+text-align: center;
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+height: 330px;
+position: relative;
+overflow: hidden;
+}
+
+.team-grid .item .cover {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(41, 30, 111, 0.5);
+transition: opacity 0.15s ease-in;
+opacity: 0;
+padding-top: 120px;
+color: #fff;
+text-shadow: 1px 1px 1px rgba(0,0,0,0.15);
+}
+
+.team-grid .item:hover .cover {
+opacity: 1;
+}
+
+.team-grid .item .name {
+font-weight: bold;
+font-size: 30px;
+margin-bottom: 8px;
+}
+
+.team-grid .item .title {
+text-transform: uppercase;
+font-weight: bold;
+color: #bbd8fb;
+letter-spacing: 2px;
+font-size: 15px;
+margin-bottom: 20px;
+}
+
+.team-grid .social {
+font-size: 25px;
+}
+
+.team-grid .social a {
+color: inherit;
+margin: 0 10px;
+display: inline-block;
+opacity: 0.7;
+}
+
+.team-grid .social a:hover {
+opacity: 1;
+}
+
+
+{% endblock %}
+
+{% block body %}
+
+<main role="main">
+
+
+
+  <div class="container">
+ 
+    <div class="team-grid">
+      <div class="container">
+        <div class="intro">
+          <h2 class="text-center">ABOUT THE PROJECT</h2>
+        </div>
+        <style>
+          .image-container {
+              text-align: center;
+          }
+  
+          .image-container img {
+              width: 300px;
+              height: 300px;
+          }
+      </style>
+        <div class="row people">
+          <div class="col-md item">
+            <div class="image-container">
+              <img src="{% static '/1.jpg' %}">
+          </div>
+          <br>
+              <p style="color:black" align="justify" >A beautifully designed flower store that allow users to effortlessly explore, purchase, and manage a wide variety of flowers sourced directly from gardens. With its intuitive interface and powerful CRUD (Create, Read, Update, Delete) functionality, revolutionizes the flower buying experience, bringing convenience and joy to flower enthusiasts and gift seekers alike.The user can login as a customer and manager.Customer can  purchase 
+                products whereas manager can add the products to be sold.Customers can purchase from the nurseries nearby in the "Nursery Near Me" section and see the products purchased in "My Orders".They have an option to cancel the items purchased. Users can give their suggestions to the admin by clicking on "Contact Us".
+                The Manager can view the order details in the "Manage Orders" section and add new product details in "Mangage Products" section.</p> 
+                
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div> <!-- /container -->
+
+</main>
+
+
+
+
+
+{% endblock %}
